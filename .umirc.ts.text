@@ -1,0 +1,35 @@
+import { defineConfig } from "umi";
+import px2vw from 'postcss-px-to-viewport';
+import {routes} from './routes/index';
+
+export default defineConfig({
+  routes: routes,
+  npmClient: 'npm',
+  hash:true,
+  targets: {
+  ie: 9,
+  },
+  title:'h5',
+  extraPostCSSPlugins:[
+    px2vw({
+        unitToConvert: 'px',
+        viewportWidth: 750,
+        unitPrecision: 5,
+        propList: ['*'],
+        viewportUnit: 'vw',
+        fontViewportUnit: 'vw',
+        selectorBlackList: [],
+        minPixelValue: 1,
+        mediaQuery: false,
+        replace: true,
+        exclude: undefined,
+        include: undefined,
+        landscape: false,
+        landscapeUnit: 'vw',
+        landscapeWidth: 568
+    })
+  ],
+  // chainWebpack(){
+
+  // },
+});

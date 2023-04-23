@@ -1,23 +1,24 @@
-import { Link, Outlet } from 'umi';
+import { useLocation, Outlet } from 'umi';
 import React from 'react';
-import styles from './index.less';
-import ReactDOM from 'react-dom';
-import App from '../app';
-
-// ReactDOM.render(<App />, document.getElementById('root'));
+import { ThemeProvider } from 'styled-components';
+import theme from '../theme/index';
+import { AliveScope, KeepAlive } from 'react-activation';
+import Login from '@/pages/login/login';
 
 export default function Layout() {
+  const location = useLocation();
+  
+  if (location.pathname === '/login') {
+    return <><Login /></>
+  }
   return (
-    <div className={styles.navs}>
-      {/* <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/docs">Docs</Link>
-        </li>
-      </ul> */}
+    <div>
+      <ThemeProvider theme={theme}>
+        {/* 页面缓存 */}
+      <AliveScope>
       <Outlet />
+      </AliveScope>       
+    </ThemeProvider>
     </div>
   );
 }

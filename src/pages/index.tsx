@@ -1,18 +1,19 @@
-import yayJpg from '../assets/yay.jpg';
-import { Button } from 'antd-mobile';
 import React from 'react';
+import {history} from 'umi';
+import Button from '@/components/Button/index'
 
 export default function HomePage() {
   return (
     <div>
-      <h2>Yay! Welcome to umi!</h2>
       <div className='cloth-wrap'>
-        <div className='cloth-item'>
-        </div>
-        <div className='cloth-item'>
-        </div>
+        
+        {/* <div className='cloth-item'>
+        </div> */}
       </div>
-      <Button color='primary'>按钮</Button>
+      首页
+      <Button color='primary' onClick={()=>{
+        history.push('/docs');
+      }}>跳转到文档</Button>
     </div>
   );
 }

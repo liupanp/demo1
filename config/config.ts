@@ -23,6 +23,7 @@ export default defineConfig({
   },
   alias: {
     '@': path.resolve(__dirname, 'src'),
+    '@PAGES': path.resolve(__dirname, '../src/pages'),
   },
   // plugins:[
   //   ['umi-plugin-react', {
@@ -55,7 +56,7 @@ export default defineConfig({
     //     landscapeWidth: 568
     // }),
     pxtorem({
-      rootValue: 10, // 指定转换倍率，我现在设置这个表示1rem=10px;
+      rootValue: 100, // 指定转换倍率，我现在设置这个表示1rem=10px;
       propList: ['*'], // 属性列表，表示你要把哪些css属性的px转换成rem，这个*表示所有
       selectorBalckList: ['.am-'], // 匹配不被转换为rem的选择器，例如UI框架antd-mobile
       exclude: /node_modules/i,

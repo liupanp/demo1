@@ -1,12 +1,12 @@
-import { defineConfig } from "umi";
-import px2vw from 'postcss-px-to-viewport';
+// import { defineConfig } from "umi";
+// import px2vw from 'postcss-px-to-viewport';
 import {routes} from '../routes/index';
-import path from 'path';
+// import path from 'path';
 const pxtorem = require('postcss-pxtorem');
 const Config = require('webpack-chain');
 const config = new Config();
 
-export default defineConfig({
+export default ({
   routes: routes,
   npmClient: 'npm',
   hash:true,
@@ -17,25 +17,6 @@ export default defineConfig({
     type:'hash' 
   },
   title:'h5',
-  define: {
-    // 自定义环境变量
-    NODE_ENV: process.env.NODE_ENV
-  },
-  alias: {
-    '@': path.resolve(__dirname, 'src'),
-  },
-  // plugins:[
-  //   ['umi-plugin-react', {
-  //     antd: true,
-  //     dva: true,
-  //     locale: {
-  //       enable: true,
-  //     },
-  //   }],
-  // ],
-  // antd:{
-  //   mobile:false //如果引入 组件报错样式问题，需要配置这个
-  // },
   extraPostCSSPlugins:[
     // px2vw({
     //     unitToConvert: 'px',

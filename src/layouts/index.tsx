@@ -9,14 +9,14 @@ import App from '../app';
 export default function Layout() {
   return (
     <div className={styles.navs}>
-      <ul>
+      {/* <ul>
         <li>
           <Link to="/">Home</Link>
         </li>
         <li>
           <Link to="/docs">Docs</Link>
         </li>
-      </ul>
+      </ul> */}
       <Outlet />
     </div>
   );

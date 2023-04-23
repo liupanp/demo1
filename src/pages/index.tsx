@@ -6,9 +6,12 @@ export default function HomePage() {
   return (
     <div>
       <h2>Yay! Welcome to umi!</h2>
-      <p>
-        <img src={yayJpg} />
-      </p>
+      <div className='cloth-wrap'>
+        <div className='cloth-item'>
+        </div>
+        <div className='cloth-item'>
+        </div>
+      </div>
       <Button color='primary'>按钮</Button>
     </div>
   );

@@ -23,7 +23,7 @@ export default defineConfig({
   },
   alias: {
     '@': path.resolve(__dirname, 'src'),
-    '@PAGES': path.resolve(__dirname, '../src/pages'),
+    // '@PAGES': path.resolve(__dirname, '../src/pages'),
   },
   // plugins:[
   //   ['umi-plugin-react', {

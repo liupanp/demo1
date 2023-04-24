@@ -1,10 +1,9 @@
-import config from '@CONFIG/dynamicBaseUrl';
+export const APP_TITLE = '项目title';
+export const APP_NAME = 'appName';
 
-export const APP_TITLE = config.title;
-export const APP_NAME = config.appName;
-
-const getCacheKey = (key) =>
-  `${config.appName}/${config.corpId}/${config.agentId}/${key}`; // 多租户需要区分
+// const getCacheKey = (key) =>
+//   `${config.appName}/${config.corpId}/${config.agentId}/${key}`; // 多租户需要区分
+const getCacheKey = (key) => `${config.appName?.toUpperCase()}__${key}`;
 export const SHOW_REFRESH_LAYOUT = getCacheKey('SHOW_REFRESH_LAYOUT');
 export const CACHE_AUTH_CODE = getCacheKey('AUTH_CODE');
 export const CACHE_AUTH_TRYTIME = getCacheKey('AUTH_CODE_TRYTIME');

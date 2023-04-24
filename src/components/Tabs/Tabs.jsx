@@ -1,36 +1,24 @@
 import React,{useState} from "react";
 import TabStyled from "./TabStyled";
-import { JumboTabs } from 'antd-mobile';
+import { TabBar } from 'antd-mobile';
+import { useLocation,history } from 'umi';
 
 const Tabs = (props) => {
   const { content, ...rest } = props;
   const [tabIdx,setTabIdx]=useState(0);
-  const getWidth=(data)=>{
-    // 根据选项计算宽度
-    return 100/Number(data.length)+'%';
+  const location = useLocation();
+  const { pathname } = location;
+
+  const setRouteActive = (value) => {
+    history.push(value)
   }
 
   return <TabStyled {...rest}>
-    <JumboTabs>
-      {content&&content.map((i,index)=>{
-      return (
-        <JumboTabs.Tab title={i.tabs} description="描述文案" key="fruits">
-        {i.tabs}
-      </JumboTabs.Tab>
-      );
-    })}
-    </JumboTabs>
-
-    {content&&content.map((i,index)=>{
-      return (
-        <div className="tab_content" key={i.tabs} onClick={()=>{
-          i?.handleClick();
-          setTabIdx(index);
-          }} style={{width:getWidth(content),color:tabIdx==index?'#0058FF':''}}>
-          {i.tabs}
-        </div>
-      );
-    })}
+    <TabBar activeKey={pathname} onChange={value => setRouteActive(value)}>
+      {content.map(item => (
+        <TabBar.Item key={item.key} icon={item.icon} title={item.title} />
+      ))}
+    </TabBar>
     </TabStyled>;
 };
 

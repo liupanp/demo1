@@ -23,6 +23,9 @@ export default defineConfig({
   },
   alias: {
     '@': path.resolve(__dirname, 'src'),
+    '@MODELS': path.resolve(__dirname, '../src/models'),
+    '@SERVICES': path.resolve(__dirname, '../src/services'),
+    '@UTILS': path.resolve(__dirname, '../src/utils'),
     // '@PAGES': path.resolve(__dirname, '../src/pages'),
   },
   autoprefixer:{
@@ -31,6 +34,16 @@ export default defineConfig({
   plugins: [
     '@umijs/plugins/dist/initial-state',
     '@umijs/plugins/dist/model',
+    // [
+    //   "@hsuna/babel-plugin-styled-components-px2rem",//styled-components里px转rem
+    //   {
+    //     "rootValue": 100,
+    //     "unitPrecision": 5,
+    //     "minPixelValue": 0,
+    //     "multiplier": 1,
+    //     "transformRuntime": true
+    //   }
+    // ]
   ],
   // plugins:[
   //   ['umi-plugin-react', {
@@ -106,5 +119,5 @@ export default defineConfig({
   //     .use('../loader/jsx-px2rem-loader')
   //       .loader(path.join(__dirname, '../loader/jsx-px2rem-loader'));
   // }
-  
+  //  babel
 });

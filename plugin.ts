@@ -13,7 +13,7 @@ export default (api: IApi) => {
   // set alias
   console.log(webpack, env,'webpack, env');
   
-  memo.resolve.alias.set('a','path/to/a');
+  memo.resolve.alias.set('@PAGES','src/pages');
   // Delete progess bar plugin
   memo.plugins.delete('progess');
 });

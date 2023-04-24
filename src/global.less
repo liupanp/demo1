@@ -1,7 +1,14 @@
 :root:root {
   --adm-color-primary: #11C66F;
 }
-html { font-size: 13.333333333333333vw }
+html { 
+  font-size: 13.333333333333333vw;
+}
+body{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
 .cloth-wrap{
   display: flex;
   justify-content: space-between;
@@ -18,3 +25,11 @@ button{
   width: 700px;
   margin-top: 20px;
 }
+@media screen and (min-width: 540px) {
+  html {
+   font-size: 28.8px;
+  }
+}
+ @media screen and (max-width: 320px) {
+    font-size: 17.06667px;
+}  

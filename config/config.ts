@@ -25,6 +25,13 @@ export default defineConfig({
     '@': path.resolve(__dirname, 'src'),
     // '@PAGES': path.resolve(__dirname, '../src/pages'),
   },
+  autoprefixer:{
+  cascade: false
+  },
+  plugins: [
+    '@umijs/plugins/dist/initial-state',
+    '@umijs/plugins/dist/model',
+  ],
   // plugins:[
   //   ['umi-plugin-react', {
   //     antd: true,

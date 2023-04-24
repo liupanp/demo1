@@ -1,5 +1,3 @@
-// const Docs = () => import('@/pages/docs/index');
-
 export default {
   routes: [
     { path: '/login', component: 'login' },
@@ -8,9 +6,10 @@ export default {
       component: '@/layouts/index',
       title:'首页',
       routes: [
-        { path: "/docs", component: 'docs', title:'文档',},
-        // { path: '/*', component: '@/pages/404.tsx' }
+        // { path: "/docs", component: 'docs', title:'文档',},
       ],
     }, 
+    { path: "/myPage", component: '@/pages/my/index.tsx', title:'我的',},
+    { path: "/docs", component: '@/pages/docs/index.tsx', title:'文档'},
   ],
 }

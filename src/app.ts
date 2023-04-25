@@ -3,6 +3,8 @@ import { matchRoutes } from 'umi';
 
 export function onRouteChange({ clientRoutes, location }) {
   const route = matchRoutes(clientRoutes, location.pathname)?.pop()?.route;
+  // console.log(route,'routes====',clientRoutes);
+
   if (route) {
     document.title = route.title || '';
   }
@@ -10,7 +12,7 @@ export function onRouteChange({ clientRoutes, location }) {
 
 let extraRoutes: any[];
 export function patchClientRoutes({ routes }) {
-  // console.log(routes,'routes====');
+  console.log(routes,'routes====');
   
   extraRoutes&&extraRoutes.forEach((route) => {
     routes.unshift({
@@ -19,7 +21,7 @@ export function patchClientRoutes({ routes }) {
       children: route.children,
     });
   });
-  console.log(extraRoutes,'extraRoutes==');
+  // console.log(extraRoutes,'extraRoutes==');
 }
 
 /**

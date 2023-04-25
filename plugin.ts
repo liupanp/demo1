@@ -6,7 +6,7 @@ export default (api: IApi) => {
 
   // 通过插件修改配置
   api.modifyConfig((memo: any) => {
-    memo.title = "移动端";
+    memo.title = "IMS";
     return memo;
   });
   api.chainWebpack(( memo, { webpack, env}) => {

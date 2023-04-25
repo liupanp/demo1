@@ -10,7 +10,8 @@ import { Globalstyle } from '../GlobalStyled';
 
 export default function Layout() {
   const location = useLocation();
-
+  console.log(location,'location');
+  
   if (location.pathname === '/login') {
     return <Login />
   }
@@ -22,6 +23,7 @@ export default function Layout() {
         <Globalstyle />
       <Outlet />
         {/* 根据路由判断是否用tabbar */}
+        {/* /tabbar */}
       <Tabbar />
       </AliveScope>       
     </ThemeProvider>

@@ -16,7 +16,7 @@ export default defineConfig({
   history:{
     type:'hash' 
   },
-  title:'IMS',
+  // title:'IMS',
   define: {
     // 自定义环境变量
     NODE_ENV: process.env.NODE_ENV

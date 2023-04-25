@@ -7,11 +7,11 @@ const HomePage = () => {
   return (
     <div style={{padding:'20px'}}>
      <Home />  
-      <div style={{marginTop:'30px'}} onClick={()=>{
+      {/* <div style={{marginTop:'30px'}} onClick={()=>{
         history.push('/login')
       }}>
         登陆
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -6,11 +6,12 @@ const TabStyled = styled.div`
   align-items:center;
   justify-content:center;
   width:100%;
+  height: 96px;
   height: 0.96rem;
-  /* height: 96px; */
   background:#fff;
   position:fixed;
-  box-shadow:5px 5px 5px 5px #989898;
+  box-shadow: 0 -4px 12px 0 #01093f0f;
+  /* box-shadow:0 -3px 12px 0px rgba(0,0,0,0.1); */
   bottom:0;
   .adm-tab-bar{
     width:100%;

@@ -38,6 +38,24 @@ export default (api: IApi) => {
   // if(api.属性 === 'xxx') { '当某个条件时，我想做一些事情。'}
   // // 有一个方法类，我需要获取一点数据
   // someUtil(api.属性) 
-
+//   api.addBeforeBabelPresets(() => {
+//   // 返回一个 Babel 插件集
+//   return () => {
+//     return {
+//       // plugins: ["Babel_Plugin_A","Babel_Plugin_B"]
+//        plugins: [
+//         "styled-components-px2rem", "styled-components",
+//       "@hsuna/babel-plugin-styled-components-px2rem",//styled-components里px转rem
+//       // {
+//       //   "rootValue": 100,
+//       //   "unitPrecision": 5,
+//       //   "minPixelValue": 0,
+//       //   "multiplier": 1,
+//       //   "transformRuntime": true
+//       // }
+//     ]
+//     }
+//   }
+// })
 
 };

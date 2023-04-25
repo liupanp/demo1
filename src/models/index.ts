@@ -1,4 +1,4 @@
-// import { queryUsers, queryUser } from '../../services/user';
+// import { queryUsers, queryUser } from '../../services/api';
  
 // export default {
 //   state: {

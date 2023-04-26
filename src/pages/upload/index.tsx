@@ -1,5 +1,7 @@
 import React,{useRef,useState} from "react";
 import  styles from './index.less'; 
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
 
 const Upload = () => {
   const inputRef=useRef(null);
@@ -77,11 +79,16 @@ const Upload = () => {
     }     
       }}
        />
+      <PhotoProvider>
        {imgUrlList?.map((i)=>{
         return(
+          <PhotoView src={i}>
           <img className={styles.uploadWrap_image} src={i} alt=""  />
+          </PhotoView>
         )
        })}
+        </PhotoProvider>
+
         </div>
 
       {/* <div>指明调用摄像头获取图片</div>
@@ -95,7 +102,12 @@ const Upload = () => {
         </div>
     
        {imgUrl&&(
-       <img className={styles.uploadWrap_image} src={imgUrl} alt=""  />
+      //  <img className={styles.uploadWrap_image} src={imgUrl} alt=""  />
+      <PhotoProvider>
+      <PhotoView src={imgUrl}>
+      <img className={styles.uploadWrap_image} src={imgUrl} alt=""  />
+      </PhotoView>
+    </PhotoProvider>
        )}
     </div>
   );

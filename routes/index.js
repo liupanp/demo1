@@ -6,7 +6,8 @@ export default {
       component: '@/layouts/index',
       title:'首页',
       routes: [
-        { path: "/my", component: '@/pages/my/index.tsx', title:'我的',},
+        // 需要底部tabbar 的放在tabbar目录下
+        { path: "/tabbar/my", component: '@/pages/tabbar/my/index.tsx', title:'我的',},
         { path: "/docs", component: '@/pages/docs/index.tsx', title:'文档'},
         { path: "/upload", component: '@/pages/upload/index.tsx', title:'上传'},
       ],

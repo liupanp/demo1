@@ -10,7 +10,7 @@ const Tabbar = () => {
       // icon: <AppOutline />,
     },
     {
-      key: '/my',
+      key: '/tabbar/my',
       title: '我的',
       // icon: <UnorderedListOutline />,
     },

@@ -11,10 +11,14 @@ const TabStyled = styled.div`
   background:#fff;
   position:fixed;
   box-shadow: 0 -4px 12px 0 #01093f0f;
-  /* box-shadow:0 -3px 12px 0px rgba(0,0,0,0.1); */
   bottom:0;
+  :global{
+    .adm-tab-bar-item-title{
+    font-size: 0.32rem;
+    }
+  }
   .adm-tab-bar{
-    width:100%;
+  width:100%;
   font-size: 0.32rem;
   /* font-size: 32px; */
   }

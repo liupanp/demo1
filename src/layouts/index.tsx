@@ -15,7 +15,8 @@ export default function Layout() {
   if (location.pathname === '/login') {
     return <Login />
   }
-  return (
+  if(location.pathname?.includes('tabbar')||location.pathname === '/'){
+    return (
     <div>
       <ThemeProvider theme={theme}>
         {/* 页面缓存 */}
@@ -25,6 +26,20 @@ export default function Layout() {
         {/* 根据路由判断是否用tabbar */}
         {/* /tabbar */}
       <Tabbar />
+      </AliveScope>       
+    </ThemeProvider>
+    </div>
+  );
+  }
+  return (
+    <div>
+      <ThemeProvider theme={theme}>
+        {/* 页面缓存 */}
+      <AliveScope>
+        <Globalstyle />
+      <Outlet />
+        {/* 根据路由判断是否用tabbar */}
+      {/* <Tabbar /> */}
       </AliveScope>       
     </ThemeProvider>
     </div>

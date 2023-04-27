@@ -2,6 +2,7 @@ import { defineConfig } from "umi";
 import px2vw from 'postcss-px-to-viewport';
 import {routes} from '../routes/index';
 import path from 'path';
+import proxy from '../proxy/index';
 const pxtorem = require('postcss-pxtorem');
 const Config = require('webpack-chain');
 const config = new Config();
@@ -16,11 +17,15 @@ export default defineConfig({
   history:{
     type:'hash' 
   },
-  // title:'IMS',
+  title:'IMS',
+  //  layout: {
+  //   title: 'IMS',
+  // },
   define: {
     // 自定义环境变量
     NODE_ENV: process.env.NODE_ENV
   },
+  proxy:proxy,
   // locale: {
   //   antd: false, // 如果项目依赖中包含 `antd`，则默认为 true
   //   baseNavigator: true, //开启浏览器语言检测
@@ -44,6 +49,7 @@ export default defineConfig({
     '@umijs/plugins/dist/locale', // 配置umi/max里的，需要另加
     '@umijs/plugins/dist/initial-state',
     '@umijs/plugins/dist/model',
+    // '@umijs/plugins/dist/layout', 
     '@umijs/plugins/dist/styled-components',
     // "styled-components-px2rem",
     // "styled-components",

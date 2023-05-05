@@ -2,11 +2,11 @@
   "private": true,
   "author": "liupan <2725756897@qq.com>",
   "scripts": {
-    "dev": "umi dev",
     "build": "umi build",
+    "dev": "umi dev",
+    "dev:pre": "cross-env UMI_ENV=dev umi dev",
     "postinstall": "umi setup",
     "setup": "umi setup",
-    "dev:pre": "cross-env UMI_ENV=dev umi dev",
     "start": "npm run dev"
   },
   "dependencies": {

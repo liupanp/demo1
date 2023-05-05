@@ -221,7 +221,11 @@ export const dataURLtoFile = (dataurl: string, filename = 'file') => {
  * @param {*} decimal
  * @param {*} scale
  */
-export const keepDecimal = (decimal: unknown, scale: number, keepBit: undefined) => {
+export const keepDecimal = (
+  decimal: unknown,
+  scale: number,
+  keepBit: undefined,
+) => {
   if (decimal === null || decimal === false || Number.isNaN(decimal)) {
     return 'N/A';
   }
@@ -291,7 +295,7 @@ export const getDateList = (startDate: any, endDate: any) => {
 /**
  * 两个对象是否相等
  */
-export const equals = (x: { [x: string]: any; }, y: { [x: string]: any; }) => {
+export const equals = (x: { [x: string]: any }, y: { [x: string]: any }) => {
   let f1 = x instanceof Object;
   let f2 = y instanceof Object;
   if (!f1 || !f2) {
@@ -382,7 +386,10 @@ export const dateFormat = (date: Date, format = 'YYYY-MM-DD HH:mm:ss') => {
  * @param {string} fmt 格式 默认: yyyy-MM-dd hh:mm:ss"
  * @return {string}
  */
-export const timeStampFormat = (timeStamp: string | number | Date, fmt: string | undefined) => {
+export const timeStampFormat = (
+  timeStamp: string | number | Date,
+  fmt: string | undefined,
+) => {
   if (!timeStamp) {
     return '';
   }

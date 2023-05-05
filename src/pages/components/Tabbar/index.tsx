@@ -1,9 +1,8 @@
-import React from "react";
 import Tab from '@/components/Tabs/index';
-import {history} from 'umi';
+import React from 'react';
 
 const Tabbar = () => {
-  const content=[
+  const content = [
     {
       key: '/',
       title: '首页',
@@ -17,7 +16,7 @@ const Tabbar = () => {
   ];
   return (
     <div>
-     <Tab content={content}></Tab>
+      <Tab content={content}></Tab>
     </div>
   );
 };

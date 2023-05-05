@@ -4,7 +4,8 @@
     "ecmaVersion": 10,
     "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true
+      "jsx": true,
+      "tsx": true
     }
   },
   "settings": {
@@ -20,7 +21,7 @@
     "node": true,
     "jasmine": true
   },
-  "extends": ["eslint:recommended", "prettier"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended","prettier"],
   "plugins": ["react-hooks", "promise", "prettier"],
   "globals": {
     "React": "readonly",

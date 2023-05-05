@@ -1,7 +1,7 @@
 import { RequestConfig } from 'umi';
 import VConsole from 'vconsole';
 new VConsole();
-const token='JWT ...'
+const token = 'JWT ...';
 const requestInterceptor = (url: string, options: any) => {
   options.headers = {
     Authorization: token,

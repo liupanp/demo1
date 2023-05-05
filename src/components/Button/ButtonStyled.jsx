@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { Button } from 'antd-mobile';
+import styled from 'styled-components';
 
 const ButtonStyled = styled(Button)`
   display: flex;

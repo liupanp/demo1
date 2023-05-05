@@ -1,5 +1,4 @@
 import React from 'react';
-import Load from '@ASSETS/loading.gif';
 
 import LoadingStyled from './LoadingStyled';
 

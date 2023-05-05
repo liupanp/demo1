@@ -1,23 +1,23 @@
 // import { defineConfig } from "umi";
 // import px2vw from 'postcss-px-to-viewport';
-import {routes} from '../routes/index';
+import { routes } from '../routes/index';
 // import path from 'path';
 const pxtorem = require('postcss-pxtorem');
 const Config = require('webpack-chain');
 const config = new Config();
 
-export default ({
+export default {
   routes: routes,
   npmClient: 'npm',
-  hash:true,
+  hash: true,
   targets: {
-  ie: 9,
+    ie: 9,
   },
-  history:{
-    type:'hash' 
+  history: {
+    type: 'hash',
   },
-  title:'h5',
-  extraPostCSSPlugins:[
+  title: 'h5',
+  extraPostCSSPlugins: [
     // px2vw({
     //     unitToConvert: 'px',
     //     viewportWidth: 750,
@@ -40,19 +40,15 @@ export default ({
       propList: ['*'], // 属性列表，表示你要把哪些css属性的px转换成rem，这个*表示所有
       selectorBalckList: ['.am-'], // 匹配不被转换为rem的选择器，例如UI框架antd-mobile
       exclude: /node_modules/i,
-    })
+    }),
   ],
-  lessLoader:{
-
-  },
+  lessLoader: {},
   // locale: {
   //   // 默认使用 src/locales/zh-CN.ts 作为多语言文件
   //   default: 'zh-CN',
   //   baseSeparator: '-',
   // },
-  postcssLoader:{
-
-  },
+  postcssLoader: {},
   // chainWebpack(config){
   //   console.log(config.toConfig())
   // },
@@ -79,5 +75,4 @@ export default ({
   //     .use('../loader/jsx-px2rem-loader')
   //       .loader(path.join(__dirname, '../loader/jsx-px2rem-loader'));
   // }
-  
-});
+};

@@ -1,14 +1,19 @@
 import webStorage from './storageManager';
 
-const TOKEN_INFO='TOKEN_INFO';
-const REFRESH_TOKEN='REFRESH_TOKEN';
+const TOKEN_INFO = 'TOKEN_INFO';
+const REFRESH_TOKEN = 'REFRESH_TOKEN';
 
 export const removeToken = () => {
   webStorage.delete(TOKEN_INFO);
   webStorage.delete(REFRESH_TOKEN);
 };
 
-export const setToken = (tokenData: { access_token: any; expires_in: any; refresh_token: any; refresh_expires_in: any; }) => {
+export const setToken = (tokenData: {
+  access_token: any;
+  expires_in: any;
+  refresh_token: any;
+  refresh_expires_in: any;
+}) => {
   // token
   webStorage.set(TOKEN_INFO, tokenData.access_token, {
     exp: tokenData.expires_in ?? 2 * 3600, // 过期时间默认2小时

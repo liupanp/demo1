@@ -11,13 +11,14 @@ export function onRouteChange({ clientRoutes, location }) {
 
 let extraRoutes: any[];
 export function patchClientRoutes({ routes }) {
-  extraRoutes&&extraRoutes.forEach((route) => {
-    routes.unshift({
-      path: route.path,
-      element: route.element,
-      children: route.children,
+  extraRoutes &&
+    extraRoutes.forEach((route) => {
+      routes.unshift({
+        path: route.path,
+        element: route.element,
+        children: route.children,
+      });
     });
-  });
   // console.log(extraRoutes,'extraRoutes==');
 }
 
@@ -59,8 +60,8 @@ const wxAgent = (data) => {
       ], //必填，传入需要使用的接口名称
       success: function (ress: any) {
         // 清除试错数据
-       let configTryTime = 0;
-       let tokenTryTime = 0;
+        let configTryTime = 0;
+        let tokenTryTime = 0;
         clearTimeout(tryTimerId); // 清除重试定时器
         // window.sessionStorage.removeItem(CACHE_AUTH_TRYTIME);
         wx.hideAllNonBaseMenuItem(); // 隐藏所有非基础按钮接口
